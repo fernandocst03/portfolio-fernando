@@ -1,0 +1,5 @@
+.themeIcon{
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
