@@ -1,0 +1,94 @@
+.navbar{
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  animation: p 0.5s ease-in-out;
+}
+
+.listItemsNavbar{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-family: var(--font-family-title);
+}
+
+.titleNavbar {
+  font-family: var(--font-family-cursive);
+  display: flex;
+  align-items: center;
+  text-decoration-line: none;
+}
+
+.titleNavbar p{
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--title);
+}
+
+.iconNavbar{
+  font-size: 3rem;
+  font-weight: 200;
+  color: var(--text-primary);
+}
+
+.itemNavbar{
+  position: relative;
+  text-decoration-line: none;
+  font-size: 1.7rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  margin-left: 40px;
+  padding: 8px 15px;
+  border: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.itemNavbar::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background-color: var(--text-primary);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s ease;
+}
+
+.itemNavbar:hover::before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.itemNavbar::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-primary);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s;
+}
+
+.itemNavbar:hover::after{
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+@keyframes p {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
